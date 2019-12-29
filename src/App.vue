@@ -1,32 +1,27 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <section class="todoapp">
+      <todo-header></todo-header>
+      <todo-main></todo-main>
+      <todo-footer></todo-footer>
+    </section>
   </div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+import TodoHeader from './components/todo-header.vue'
+import TodoMain from './components/todo-main.vue'
+import TodoFooter from './components/todo-footer.vue'
+export default {
+  components: {
+    // 'todo-header': TodoHeader
+    // TodoHeader: TodoHeader
+    TodoHeader,
+    TodoMain,
+    TodoFooter
   }
 }
+</script>
+
+<style lang="less">
 </style>
